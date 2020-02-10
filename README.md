@@ -1,28 +1,15 @@
-# Adonis API application
+### Algumas notas
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
+`adonis new <projeto> --api-only`
 
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
+`cd <projeto>`
 
-## Setup
+`npm install pg` instala o PostgreSQL
 
-Use the adonis command to install the blueprint
+`adonis migration:run`
 
-```bash
-adonis new yardstick --api-only
-```
+`adonis make:controller <nome_do_controlador>`
 
-or manually clone the repo and then run `npm install`.
+`adonis route:list`
 
-
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
-adonis migration:run
-```
+`adonis make:model <nome_do_modelo> -m -c` -m migration -c controller
