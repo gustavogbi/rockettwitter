@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +14,17 @@
 */
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
-const Route = use('Route')
+const Route = use("Route");
 
-Route.post('/register', 'AuthController.register')
-Route.post('/authenticate', 'AuthController.authenticate')
+Route.get("/", () => {
+  return "hello world!";
+});
+
+Route.post("/register", "AuthController.register");
+Route.post("/authenticate", "AuthController.authenticate");
 
 Route.group(() => {
-  Route.resource('tweets', 'TweetController').apiOnly().except('update')
-}).middleware('auth')
+  Route.resource("tweets", "TweetController")
+    .apiOnly()
+    .except("update");
+}).middleware("auth");
